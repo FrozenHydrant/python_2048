@@ -51,7 +51,7 @@ def main():
                     move_tile('right')
             pygame.display.update()
     except Exception as e:
-        messagebox.showerror('Error',f'Py2048 has encountered a fatal error and cannot continue:\n {e}')
+        messagebox.showerror('Error', f'Py2048 has encountered a fatal error and cannot continue:\n {e}')
 
 
 def random_tile():
@@ -62,7 +62,7 @@ def random_tile():
             templist1.append(atile)
     for lol in range(random.randint(1, 4)):
         tiles[random.choice(templist1)] = [random.choice(random_tiles)]
-    #print(tiles)
+    # print(tiles)
 
 
 def draw_blocks():
@@ -79,11 +79,10 @@ def move_tile(direction):
     global playermoved
     if direction == 'right':
         for item in tiles:
-            if (item + 1) % 3 == 0:
+            if item == 2 or item == 6 or item == 10 or item == 14:
                 if not tiles[item + 1]:
                     tiles[item + 1] = tiles[item]
                     tiles[item] = []
-                    print(tiles)
     playermoved = True
 
 
