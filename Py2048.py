@@ -5,6 +5,10 @@ import pygame
 import pygame.locals
 import os
 import tkinter.messagebox as messagebox
+from tkinter import Tk
+
+mainbox = Tk()
+mainbox.withdraw()
 
 pygame.init()
 gamefont = pygame.font.SysFont('Consolas', 30)
