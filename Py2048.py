@@ -22,21 +22,22 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 BACKGROUND = (142, 126, 108)
 
-screen = pygame.display.set_mode((BOXWIDTH, BOXHEIGHT), pygame.RESIZABLE)
+screen = pygame.display.set_mode((BOXWIDTH, BOXHEIGHT))
 tiles = {}
 random_tiles = ('tile_2', 'tile_4')
 for i in range(16):
     tiles[i] = []
 
-tile_2 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_2.jpg')
-tile_4 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_4.jpg')
-tile_8 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_8.jpg')
-tile_16 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_16.jpg')
-tile_32 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_32.jpg')
-tile_64 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_64.jpg')
-tile_128 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_128.jpg')
-tile_256 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_256.jpg')
-tile_blank = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_blank.jpg')
+tile_2 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_2.tif')
+tile_4 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_4.tif')
+tile_8 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_8.tif')
+tile_16 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_16.tif')
+tile_32 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_32.tif')
+tile_64 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_64.tif')
+tile_128 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_128.tif')
+tile_256 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_256.tif')
+tile_512 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_512.tif')
+tile_blank = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_blank.tif')
 
 playermoved = False
 game_end = False
@@ -54,6 +55,7 @@ def main():
                 playermoved = False
             draw_blocks()
             screen.blit(gamefont.render(f'Score: {score}', True, WHITE), (BOXWIDTH - 250, 0))
+            pygame.display.update()
             keys = pygame.key.get_pressed()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
