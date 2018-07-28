@@ -28,16 +28,16 @@ random_tiles = ('tile_2', 'tile_4')
 for i in range(16):
     tiles[i] = []
 
-tile_2 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_2.tif')
-tile_4 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_4.tif')
-tile_8 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_8.tif')
-tile_16 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_16.tif')
-tile_32 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_32.tif')
-tile_64 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_64.tif')
-tile_128 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_128.tif')
-tile_256 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_256.tif')
-tile_512 = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_512.tif')
-tile_blank = pygame.image.load(os.getcwd() + '\\py2048_assets\\tiles\\2048_blank.tif')
+tile_2 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_2.tif'))
+tile_4 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_4.tif'))
+tile_8 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_8.tif'))
+tile_16 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_16.tif'))
+tile_32 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_32.tif'))
+tile_64 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_64.tif'))
+tile_128 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_128.tif'))
+tile_256 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_256.tif'))
+tile_512 = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_512.tif'))
+tile_blank = pygame.image.load(os.path.join(os.getcwd(), 'py2048_assets', 'tiles', '2048_blank.tif'))
 
 playermoved = False
 game_end = False
